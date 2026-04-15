@@ -3,11 +3,20 @@
 
 Aaron Adanza
 ● Differences observed between sequential and parallel execution
-The sequential merge sort is much faster than the parallel merge sort in all dataset sizes because it does not have process creation and communication overhead.
-● Performance behavior across dataset sizes 
-● Challenges encountered during implementation 
-● Insights about overhead, synchronization, or merging 
-● Situations where parallelism was beneficial or unnecessary 
+Sequential runs step-by-step using one process, while parallel execution splits the task into chunks and runs them at the same time using multiple processes. Parallel is more complex but can use multiple CPU cores.
+
+● Performance behavior across dataset sizes
+For small datasets, sequential was faster due to low overhead. For medium and large datasets, parallel became more efficient and showed better performance as workload increased.
+
+● Challenges encountered during implementation
+Difficulties included splitting data correctly, managing multiple processes, and combining results properly. In searching, returning the correct global index was also challenging.
+
+● Insights about overhead, synchronization, or merging
+Parallel processing has overhead from creating processes and communication. Synchronization is needed when collecting results, and merging sorted chunks correctly is important to maintain accuracy.
+
+● Situations where parallelism was beneficial or unnecessary
+Parallelism was beneficial for large datasets where the workload is heavy. It was unnecessary for small datasets because the overhead made it slower than sequential execution.
+
 
 Mitch Dumdum
 ● Differences observed between sequential and parallel execution 
