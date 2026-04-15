@@ -40,8 +40,6 @@ Parallel systems introduce overhead from thread creation, communication, and syn
 Parallelism was beneficial for large, independent tasks that could be divided evenly. However, it was unnecessary or inefficient for small workloads or tasks with heavy dependencies between steps.
 
 
-
-
 Sophia Plariza
 ● Differences observed between sequential and parallel execution
 
