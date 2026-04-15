@@ -80,3 +80,5 @@ Answer: Parallel algorithms introduce overhead such as process creation, context
 
 Answer: Parallelism was beneficial when working with large datasets because it utilized multiple CPU cores and reduced execution time. However, for small datasets, parallel execution was unnecessary and even slower due to overhead costs. Therefore, sequential algorithms are more suitable for small-scale problems, while parallel algorithms are better for large-scale computations where performance improvements justify the added complexity.
 
+<h1 style="color: red;">Hello World</h1>
+
