@@ -2,7 +2,8 @@
 # Sequential vs Parallel Algorithms 
 
 Aaron Adanza
-● Differences observed between sequential and parallel execution 
+● Differences observed between sequential and parallel execution
+The sequential merge sort is much faster than the parallel merge sort in all dataset sizes because it does not have process creation and communication overhead.
 ● Performance behavior across dataset sizes 
 ● Challenges encountered during implementation 
 ● Insights about overhead, synchronization, or merging 
