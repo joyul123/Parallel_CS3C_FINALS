@@ -1,11 +1,22 @@
 def linear_search(data, target):
     for i, value in enumerate(data):
         if value == target:
-            return i  # found
-    return -1  # not found
+            return i  # return index if found
+    return -1  # return -1 if not found
+
+import random
+import time
+
+# generate data
+data = [random.randint(1, 1000000) for _ in range(100000)]
+
+# choose a target
 target = data[len(data)//2]
 
-index = linear_search(data, target)
+# measure time
+start = time.time()
+result = linear_search(data, target)
+end = time.time()
 
-print("Sequential Search Result:", index)
-
+print("Index found:", result)
+print("Time:", end - start)
