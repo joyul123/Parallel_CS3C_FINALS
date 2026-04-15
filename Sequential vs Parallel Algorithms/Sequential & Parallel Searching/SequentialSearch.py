@@ -19,4 +19,8 @@ result = linear_search(data, target)
 end = time.time()
 
 print("Index found:", result)
+<<<<<<< HEAD
 print("Time:", end - start)
+=======
+print("Time:", end - start)
+>>>>>>> 8e90325e71921b062a5e41f2959825424c7708ca
