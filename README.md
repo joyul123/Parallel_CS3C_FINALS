@@ -11,10 +11,19 @@ The sequential merge sort is much faster than the parallel merge sort in all dat
 
 Mitch Dumdum
 ● Differences observed between sequential and parallel execution 
+Sequential Execution is the completion of a task one after the next in a specific order of execution. This makes our task of debugging simple. In contrast, Parallel Execution breaks a task into smaller pieces and runs them all at once with multiple parallel processes. While this helps to use resources effectively, it introduces complexity; you have to manage coordination, synchronization, and proper data handling for all of the tasks that are executed in parallel.
+
 ● Performance behavior across dataset sizes 
+Smaller-sized datasets worked better using a sequential algorithm because there was very slight overhead associated with a sequential algorithm's execution. Conversely, larger datasets required the use of efficient parallel algorithms to allow the distribution of work across multiple processors. The performance gain of a parallel algorithm is not as reliable sometimes due to overhead that can impact execution times.
+
 ● Challenges encountered during implementation 
+The difficulty of dividing the dataset correctly, as well as having each process carry out its assigned phase correctly, was one of the most challenging aspects of working with parallel data. Merging sorted chunks back together in parallel sorting and getting a global index in parallel searching have also proven to be challenging. Finally, troubleshooting parallel code has become far more difficult owing to having so many processes running simultaneously.
+
 ● Insights about overhead, synchronization, or merging 
+In parallel algorithms, there are some performance detriments that arise from such things as creating processes, communicating between them, and context switching. Furthermore, synchronizing for correctness can cause execution delay if done poorly. Merging of results may also become a bottleneck if it is not efficiently implemented.
+
 ● Situations where parallelism was beneficial or unnecessary 
+For tasks with large datasets, using parallelism increased performance because all tasks could be processed at the same time, however, for small datasets using parallelism is not necessary and more overhead was incurred than if they would have been executed sequentially making sequential execution faster than the use of parallelism in the majority of these types of situations.
 
 
 Niros Val Inojales
