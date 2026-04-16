@@ -37,10 +37,20 @@ For tasks with large datasets, using parallelism increased performance because a
 
 Niros Val Inojales
 ● Differences observed between sequential and parallel execution 
-● Performance behavior across dataset sizes 
+Answer: The main difference is how your computer's brain tackles a job. Sequential execution is like a single-lane road: it follows one path, finishing one task before starting the next. It is simple and predictable with very little paperwork, but it’s limited by the speed of a single processor core. Parallel execution is more like a multi lane highway. It breaks a big task into smaller chunks so that multiple processor cores can work on them at the exact same time. While this is much faster for massive datasets, it adds extra work because the computer has to spend time creating processes and coordinating how to merge all the pieces back together. You'll often find that for small tasks, the sequential way is actually faster because it avoids all that extra management.
+
+● Performance behavior across dataset sizes
+Answer: The performance of these algorithms changes significantly based on the amount of data they are processing. For a Small Dataset of 1,000 elements, sequential algorithms typically perform better because they have low overhead and do not require the extra time needed for process creation or synchronization. However, as you move to a Medium Dataset of 100,000 elements, you reach a tipping point where the computational workload begins to outweigh the coordination costs. By the time you reach a Large Dataset of 1,000,000 elements, parallel algorithms clearly demonstrate their scalability potential, utilizing multiple CPU cores to handle the massive workload simultaneously. Ultimately, while sequential speed is limited by the efficiency of a single core, parallel execution becomes much more beneficial as the data grows large enough to justify the complexity of managing multiple processes.
+
 ● Challenges encountered during implementation 
+Answer: One of the biggest hurdles was data partitioning, which requires precisely dividing the dataset into chunks and ensuring the last process handles any remainder. In parallel searching, it was challenging to calculate the correct global index, as each process only knows its position within its own small slice of data. For sorting, the main difficulty lay in the merging and synchronization phase, where individual sorted chunks must be combined into one final list without creating a performance bottleneck. Finally, managing interprocess communication through queues required careful coordination to ensure results were resolved correctly from all simultaneous workers.
+
 ● Insights about overhead, synchronization, or merging 
+Answer: A key insight is that parallel algorithms aren't always faster because they require extra management that sequential models avoid. Overhead the time the system spends creating processes and handling communication can actually make parallel execution slower than sequential for small tasks. Synchronization is also essential to ensure correctness, such as merging partitioned results or avoiding race conditions. Finally, merging acts as a potential bottleneck; while chunks are sorted quickly in parallel, combining them into one global list requires careful coordination to keep the performance gains. Parallelism is essentially a trade off where you gain scalability at the cost of higher complexity and coordination.
+
 ● Situations where parallelism was beneficial or unnecessary 
+Answer: Parallelism was unnecessary for small datasets, like the 1,000 element test, because the overhead the time the computer spends creating processes and managing communication took longer than the actual task itself. In these cases, a sequential approach is more efficient because it avoids all management costs. However, parallelism was highly beneficial for the large dataset of 1,000,000 elements. At this scale, the massive workload outweighs the coordination costs, allowing the algorithm to take full advantage of multiple CPU cores to finish the job much faster. Ultimately, parallelism is a tool meant for heavy lifting; using it for small, simple tasks is often slower and less efficient than sticking to a single linear path.
+
 
 Ced Louise R. Bentuzal Reflection
 ● Differences observed between sequential and parallel execution
