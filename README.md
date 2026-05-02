@@ -1,5 +1,5 @@
 CS321_CS3C 
-![Alt text](https://github.com/joyul123/Parallel_CS3C_FINALS/blob/main/CS_326-CS3C%20AARON%20ADANZA%20(1).png?raw=true)
+![Alt text](https://github.com/joyul123/Parallel_CS3C_FINALS/blob/main/CS_326-CS3C%20MEMBERS.png?raw=true)
 
 
 
