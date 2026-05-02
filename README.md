@@ -1,3 +1,18 @@
+CS321_CS3C 
+![Alt text](image.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Parallel_CS3C
 # Sequential vs Parallel Algorithms 
 
